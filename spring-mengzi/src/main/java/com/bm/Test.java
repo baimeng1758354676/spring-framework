@@ -10,14 +10,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  **/
 public class Test {
 	public static void main(String[] args) {
-		ApplicationContext context = new AnnotationConfigApplicationContext("com.bm.configuration");
-		Person bean = context.getBean(Person.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext("com.bm");
+		Person bean = (Person) context.getBean("bm1");
 
 
 		System.out.println(String.format("data:%s,address:%s", bean, Integer.toHexString(bean.hashCode())));
 
-		Object bm = context.getBean("bm");
-		System.out.println(String.format("data:%s,address:%s", bm, Integer.toHexString(bm.hashCode())));
+//		Object bm = context.getBean("bm");
+//		System.out.println(String.format("data:%s,address:%s", bm, Integer.toHexString(bm.hashCode())));
 
 
 	}

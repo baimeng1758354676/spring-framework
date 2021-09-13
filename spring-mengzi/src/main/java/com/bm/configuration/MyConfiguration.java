@@ -1,7 +1,5 @@
 package com.bm.configuration;
 
-import com.bm.Person;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -18,20 +16,20 @@ public class MyConfiguration {
 //		return new Person();
 //	}
 
+//	@Scope("prototype")
+//	@Bean("bm1")
+//	public Person bm1() {
+//		System.out.println("生成原型bean bm1");
+//		return new Person("bm1", 2);
+//	}
 
-	@Bean("bm")
-	public Person bm1() {
-//		System.out.println("生成单例bean");
-		return new Person("single", 2);
-	}
 
-
-	//	@Scope("prototype")
-	@Bean("bm")
-	public Person bm() {
-//		System.out.println("生成原型bean");
-		return new Person("prototype", 1);
-	}
+//	@Scope("prototype")
+//	@Bean("bm2")
+//	public Person bm() {
+//		System.out.println("生成原型bean bm2");
+//		return new Person("bm2", 1);
+//	}
 
 
 }
