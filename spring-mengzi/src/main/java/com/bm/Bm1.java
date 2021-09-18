@@ -1,5 +1,6 @@
 package com.bm;
 
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,8 +11,13 @@ import org.springframework.stereotype.Component;
  **/
 @Component
 //@Scope("prototype")
-public class Bm1 extends Person {
+public class Bm1 extends Person implements InitializingBean {
 
 	@Autowired
 	private Person bm2;
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		this.name = "单例";
+	}
 }

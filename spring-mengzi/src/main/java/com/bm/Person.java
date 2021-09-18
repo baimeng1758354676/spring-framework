@@ -14,8 +14,8 @@ import lombok.ToString;
 @NoArgsConstructor
 public class Person {
 
-	private String name;
-	private Integer age;
+	protected String name;
+	protected Integer age;
 
 
 }
